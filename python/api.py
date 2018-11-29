@@ -13,6 +13,7 @@ def hello():
 	db = pymysql.connect(
 		host='localhost',
 		port=5353,
+		#port=3600,
 		user='root',
 		password='example',
 		db='manage_worker',
@@ -39,6 +40,6 @@ def hello():
 #	app.run(debug=True)
 
 def main():
-	app.run();
+	app.run(debug=True, host='0.0.0.0', port=5000);
 
 main();
